@@ -5,6 +5,6 @@ export const connectDB =()=>{
     mongoose.connect(process.env.MONGO_URI,{
         dbName: 'pracAPI',
     })
-    .then(()=> console.log("db connected"))
+    .then((c)=> console.log(`Db connected with ${c.connection.host}`))
     .catch((err)=>console.log(err));
 };
